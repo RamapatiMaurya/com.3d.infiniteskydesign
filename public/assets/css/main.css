@@ -100,6 +100,12 @@
 		line-height: 1.65;
 	}
 
+
+	#header .inner {
+		margin: 0 auto;
+		position: relative;
+	}
+	
 		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
