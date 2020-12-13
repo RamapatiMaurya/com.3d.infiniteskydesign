@@ -4,8 +4,9 @@ router.use(express.static(__dirname+"./public"))
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', 
-  subtitle1: 'A responsive video gallery template with a functional designed by', subtitle2: '', url: '' });
+  res.render('index', { title: 'Innovative Homes', 
+  subtitle1: 'Decorating & Beautiful Homes delights', subtitle2: 'Dreams fulfilled our quality experts' });
+  // Decorating & Beautiful Homes delights your dreams can fullfil our best experts
 });
 
 module.exports = router;
