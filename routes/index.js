@@ -17,6 +17,41 @@ router.get('/', function(req, res, next) {
 //   res.render('contact', { title: 'Contact',  success:'' });
 // });
 
+/* GET blog page. */
+router.get('/blog/', function(req, res, next) {
+  res.render('blog', { title: 'Blogs', flag:0, success:'' });
+});
+
+/* GET career page. */
+router.get('/career/', function(req, res, next) {
+  res.render('career', { title: 'Career', flag:0, success:'' });
+});
+
+/* GET category page. */
+router.get('/category/', function(req, res, next) {
+  res.render('category', { title: 'Category', flag:0, success:'' });
+});
+
+/* GET contact page. */
+router.get('/contact/', function(req, res, next) {
+  res.render('contact', { title: 'Contact', flag:0, success:'' });
+});
+
+/* GET maps page. */
+router.get('/maps/', function(req, res, next) {
+  res.render('maps', { title: 'Maps', flag:0, success:'' });
+});
+
+/* GET register page. */
+router.get('/register/', function(req, res, next) {
+  res.render('register', { title: 'Register', flag:0, success:'' });
+});
+
+/* GET login page. */
+router.get('/login/', function(req, res, next) {
+  res.render('login', { title: 'Login', flag:0, success:'' });
+});
+
 /* GET Upload page. */
  router.get('/upload/', function(req, res, next) {
    res.render('upload', { title: 'Upload map details', flag:0, success:'' });
