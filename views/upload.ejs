@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/menu_main.css" />
+	</head>
+	<body id="top">
+		<header id="header">
+			<div class="inner">
+				<a href="/" class="logo">Homesdoor</a>
+				<nav id="nav">
+					<a href="/">Home</a>
+					<a href="#">Category</a>
+					<a href="#">Services</a>
+					<a href="#">house Maps</a>
+					<a href="#">Career</a>
+					<a href="#">Blogs</a>
+					<a href="#">Contact</a>
+					<a href="/upload">Upload</a>
+					<a href="#">Login/Register</a>
+				</nav>
+				<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+			</div>
+		</header>
+			<div class="row">
+				<div class="col-md-8">
+
+					<form class="contact-form" id="" name="contactform" action="/upload" method="POST">
+							<div class="row">
+								<div class="col-md-12">
+									<p style="color:red;"></p>
+									<div class="form-group">
+										<label class="sr-only" for="p_title">Title</label>
+										<input type="text" required="" name="p_title" class="form-control" id="p_title" placeholder="Map Title">
+									</div>
+								</div>
+
+							</div>
+						<div class="form-group">
+							<label class="sr-only" for="subject">Contact No.</label>
+							<input type="text" required="" name="phone" class="form-control" id="subject" placeholder="Your Phone">
+							</div>
+
+						<div class="form-group">
+								<label class="sr-only" for="email">Email</label>
+								<input type="email" required="" name="email" class="form-control" id="email" placeholder="Your Email">
+							</div>
+
+						<div class="form-group">
+								<label class="sr-only" for="message">Description</label>
+								<textarea name="message" required="" class="form-control" id="message" placeholder="Description"></textarea>
+							</div>
+							<label for="img">Select image:</label>
+  						<input type="file" id="img" name="img" accept="image/*">
+						<div class="text-left">
+								<button type="submit" name="submit" class="btn btn-primary input-btn"><span>Submit</span></button>
+							</div>
+						</form>
+					</div>
+				</div>
+
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<h2>Etiam veroeros lorem</h2>
+						<p>Pellentesque eleifend malesuada efficitur. Curabitur volutpat dui mi, ac imperdiet dolor tincidunt nec. Ut erat lectus, dictum sit amet lectus a, aliquet rutrum mauris. Etiam nec lectus hendrerit, consectetur risus viverra, iaculis orci. Phasellus eu nibh ut mi luctus auctor. Donec sit amet dolor in diam feugiat venenatis. </p>
+
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com/">Unsplash</a>. Videos: <a href="http://coverr.co/">Coverr</a>.</p>
+					</div>
+				</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
