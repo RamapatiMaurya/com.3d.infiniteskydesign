@@ -1,7 +1,11 @@
 var express = require('express');
+
+var multer  = require('multer')
+var upload = multer({ dest: 'uploads/' })
+
 var router = express.Router();
 var connection = require('../modules/connection')
-var ContactModel = require('../modules/contact')
+var FileInfoModel = require('../modules/map_info')
 router.use(express.static(__dirname+"./public"))
 
 /* GET home page. */
@@ -57,24 +61,34 @@ router.get('/login/', function(req, res, next) {
    res.render('upload', { title: 'Upload map details', flag:0, success:'' });
  });
 
-/* POST Contact page. */
-router.post('/upload', function(req, res, next) {
-  var contactDetails = new ContactModel ({
-    name: req.body.name,
-    phone: req.body.phone,
-    email: req.body.email,
-    remark: req.body.message
+/* POST Upload page. */
+router.post('/upload', upload.array('img', 2), function(req, res, next) {
+  var fileDetails = new FileInfoModel ({
+    // String
+    p_title: req.body.p_title,
+    p_path1: req.body.p_path1,
+    p_path2: req.body.p_path2,
+    p_description: req.body.description,
+    uploaded_by: "Rajendra Yadav",
+    file_name1: req.body.file_name1,
+    file_name2: req.body.file_name2,
+    measurement_unit: "inches",
+    facing: "req.body.facing",
+    currency: "req.body.currency",
+    
+
+
   })
 
-  contactDetails.save(function(err, callback){
+  fileDetails.save(function(err, callback){
     if (err) throw err
       else
-        res.render('index', { title: 'Contact', 
-        success:"We have address your concern and get back  to you very soon!", 
+        res.render('index', { title: 'Data Uploading', 
+        success:"Data Uploaded Successfully on server!!!!!", 
         subtitle1: 'Decorating & Beautiful Homes delights', subtitle2: 'Dreams fulfilled our quality experts' });
   })
   
-  console.log(contactDetails)
+  console.log(fileDetails)
 });
 
 module.exports = router;
