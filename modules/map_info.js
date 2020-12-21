@@ -16,6 +16,6 @@ const fileSchema = new mongoose.Schema({
 
 })
 
-const FileInfoModel = mongoose.model('Contact', fileSchema)
+const FileInfoModel = mongoose.model('map_media', fileSchema)
 
 module.exports = FileInfoModel

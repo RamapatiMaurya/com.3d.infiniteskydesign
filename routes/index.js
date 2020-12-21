@@ -66,12 +66,12 @@ router.post('/upload', upload.array('img', 2), function(req, res, next) {
   var fileDetails = new FileInfoModel ({
     // String
     p_title: req.body.p_title,
-    p_path1: req.body.p_path1,
-    p_path2: req.body.p_path2,
+    p_path1: "req.body.p_path1",
+    p_path2: "req.body.p_path2",
     p_description: req.body.description,
     uploaded_by: "Rajendra Yadav",
-    file_name1: req.body.file_name1,
-    file_name2: req.body.file_name2,
+    file_name1: "req.body.file_name1",
+    file_name2: "req.body.file_name2",
     measurement_unit: "inches",
     facing: "req.body.facing",
     currency: "req.body.currency",
