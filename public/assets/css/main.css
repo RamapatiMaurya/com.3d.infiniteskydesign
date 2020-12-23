@@ -100,7 +100,6 @@
 		line-height: 1.65;
 	}
 
-
 	#header .inner {
 		margin: 0 auto;
 		position: relative;
@@ -360,8 +359,8 @@
 	.form-group {
 		color: #fff;
 		display: block;
-		font-size: 0.9em;
-		font-weight: 400;
+		font-size: 1em;
+		font-weight: 600;
 		margin: 1em 0 1em 0;
 	}
 
@@ -1363,7 +1362,7 @@
 
 		}
 
-		#main .inner {
+		#main .inner, .row {
 			width: 90%;
 			max-width: 80em;
 			margin: 0 auto;
@@ -1371,7 +1370,7 @@
 
 			@media screen and (max-width: 480px) {
 
-				#main .inner {
+				#main .inner, .row {
 					width: 95%;
 				}
 

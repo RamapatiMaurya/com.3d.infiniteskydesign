@@ -1,91 +1,205 @@
-	<!DOCTYPE html>
-	<html>
-		<head>
-			<title><%= title %></title>
-			<meta charset="utf-8" />
-			<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/menu_main.css" />
-		</head>
-		<body id="top">
-			<header id="header">
-				<div class="inner">
-					<a href="/" class="logo">Homesdoor</a>
-					<nav id="nav">
-						<a href="/">Home</a>
-						<a href="/category">Category</a>
-						<a href="/services">Services</a>
-						<a href="/maps">house Maps</a>
-						<a href="/career">Career</a>
-						<a href="/blog">Blogs</a>
-						<a href="/contact">Contact</a>
-						<a href="/upload">Upload</a>
-						<a href="/register">Login/Register</a>
-					</nav>
-					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-				</div>
-			</header>
-	<section class="section">
-			<div class="main">
-				<div class="inner">
-				
-					<div class="col-md-8">
-						<br/><br/><br/><br/><br/>
-						<form class="contact-form" id="" name="contactform" action="/upload" method="POST" enctype="multipart/form-data">
-								<div class="row">
-									<div class="col-md-12">
-										<p style="color:red;"></p>
-										<div class="form-group">
-											<label class="sr-only" for="p_title">Title</label>
-											<input type="text" required="" name="p_title" class="form-control" id="p_title" placeholder="Map Title">
-										</div>
-									</div>
-
-								</div>
-		
-							<div class="form-group">
-									<label class="sr-only" for="description">Description</label>
-									<textarea name="description" required="" class="form-control" id="description" placeholder="Description"></textarea>
-								</div>
-								<div class="form-group">
-								<label for="img" id="element1" >Digital Map:</label>
-							<input type="file" id="element1"  name="img" accept="image/*">
-							</div>
-							<div class="form-group">
-								<label for="img" id="element1" >Hand made map:</label>
-							<input type="file" id="element1"  name="img" accept="image/*">
-							</div>
-							<div class="text-left">
-									<button type="submit" name="submit" class="btn btn-primary input-btn"><span>Submit</span></button>
-								</div>
-							</form>
-					</div>
-				</div>
+<!DOCTYPE html>
+<html>
+  <head>
+	<title><%= title %></title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/menu_main.css" />
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  </head>
+  <body id="top">
+	<header id="header">
+		<div class="inner">
+			<a href="/" class="logo">Homesdoor</a>
+			<nav id="nav">
+				<a href="/">Home</a>
+				<a href="/category">Category</a>
+				<a href="/services">Services</a>
+				<a href="/maps">house Maps</a>
+				<a href="/career">Career</a>
+				<a href="/blog">Blogs</a>
+				<a href="/contact">Contact</a>
+				<a href="/upload">Upload</a>
+				<a href="/register">Login/Register</a>
+			</nav>
+			<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+		</div>
+	</header>
+  <div class="main">
+	<div class="row">
+		<br/><br/><br/><br/><br/><br/>
+	<form>	
+		<div class="col-md-12 col-sm-12">
+			<div class="form-group col-md-6 col-sm-6">
+				<label for="name">Title*</label>
+				<input type="text" class="form-control input-sm" id="name" placeholder="">
 			</div>
-		</section>
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<h2>Etiam veroeros lorem</h2>
-							<p>Pellentesque eleifend malesuada efficitur. Curabitur volutpat dui mi, ac imperdiet dolor tincidunt nec. Ut erat lectus, dictum sit amet lectus a, aliquet rutrum mauris. Etiam nec lectus hendrerit, consectetur risus viverra, iaculis orci. Phasellus eu nibh ut mi luctus auctor. Donec sit amet dolor in diam feugiat venenatis. </p>
+			<div class="form-group col-md-6 col-sm-6">
+				<label for="address">Description*</label>
+				<textarea class="form-control input-sm" id="address" rows="3"></textarea>
+			</div>
+		</div>
+		<div class="col-md-12 col-sm-12" id="deceased">
+			<div class="form-group col-md-4 col-sm-4">
+				<label for="email">Width*</label>
+				<input type="email" class="form-control input-sm" id="email" placeholder="">
+			</div>
+			<div class="form-group col-md-1 col-sm-1">
+				<p class=" input-sm"></p>
+				<p class="row">X</p>
+			</div>
+			<div class="form-group col-md-4 col-sm-4">
+					<label for="city">Height*</label>
+					<input type="text" class="form-control input-sm" id="city" placeholder="">
+				</div>
+			
+				<div class="form-group col-md-3 col-sm-3">
+					<label for="units">Select Units*</label>
+				<select class="form-control" id="units">
+					<option>inch</option>
+					<option>feet</option>
+					<option>cm</option>
+					<option>meter</option>
+				</select>
+			</div>
+			<div class="form-group col-md-6 col-sm-6">
+					<label for="country">Country*</label>
+					<input type="text" class="form-control input-sm" id="country" placeholder="">
+				</div>
+		
+			<div class="form-group col-md-6 col-sm-6">
+					<label for="pincode">Pincode</label>
+					<input type="text" class="form-control input-sm" id="pincode" placeholder="">
+				</div>
+		
+			<div class = "form-group col-md-6 col-sm-6">
+				  <label for="years">You could register for up to 10 years for Kalabhairava Shanthi - M.A *</label>	 
+				<span class="help-block">Please choose the no. of months for which you would like to register</span>
+			 
+				  <select class="form-control input-sm" id="years">
+				<option>-- Select No of Year --</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+				  </select>
+			</div>
+		
+			<div class = "form-group col-md-6 col-sm-6">
+				  <label for="months">You could register for up to 10 months for Kalabhairava Shanthi. *</label>
+				  <span class="help-block">Please choose the no. of months for which you would like to register</span>	      
+				  <select class="form-control input-sm" id="months">
+				<option>-- Select No of Month --</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+				  </select>
+			</div>
+		
+			<div class="form-group col-md-6 col-sm-6" >
+					<label for="pincode">Would you be visiting ashram to participate in Kalabhairava Shanthi - M.A ? * 
+				<input type="checkbox" checked data-toggle="toggle"></label>
+				<span class="help-block">if you need a cottage to stay, you could book in advance through email to ishastay@ishafoundation.org</span>
+			</div>
+		
+			<div class="form-group col-md-6 col-sm-6">
+					<label for="arrival">Arrival Date</label>
+					<input type="text" class="form-control input-sm datepicker" id="arrival" placeholder="">
+				</div>
+		</div>
+		<div class="col-md-12 col-sm-12" id="deceased">
+			<div class="form-group col-md-3 col-sm-3">
+					<label for="name">Name*</label>
+					<input type="text" class="form-control input-sm" id="name" placeholder="">
+				</div>
+			<div class="form-group col-md-3 col-sm-3">
+					<label for="gender">Gender*</label>
+					<input type="text" class="form-control input-sm" id="gender" placeholder="">
+				</div>
+			<div class="form-group col-md-3 col-sm-3">
+					<label for="age">Age*</label>
+					<input type="text" class="form-control input-sm" id="age" placeholder="">
+				</div>
+			<div class="form-group col-md-3 col-sm-3">
+					<label for="DOB">Date of Birth or Exact Birth Year*</label>
+					<input type="text" class="form-control input-sm datepicker" id="DOB" placeholder="">
+				</div>
+			<div class="form-group col-md-3 col-sm-3">
+					<label for="DOD">Date of Death or Exact Death Year*</label>
+					<input type="text" class="form-control input-sm datepicker" id=" DOD" placeholder="">
+				</div>
+			<div class="form-group col-md-3 col-sm-3">
+					<label for="mother">Deceased Person's Mother Name*</label>
+					<input type="text" class="form-control input-sm" id="mother" placeholder="">
+				</div>
+			<div class="form-group col-md-3 col-sm-3">
+					<label for="father">Deceased Person's Father Name*</label>
+					<input type="text" class="form-control input-sm" id="father" placeholder="">
+				</div>
+			<div class="form-group col-md-3 col-sm-3">
+				<label for="photo">Photo*</label>
+				<input type="file" id="photo">
+				<p class="help-block">Please upload individual photo. Group photo is not acceptable.</p>
+			</div>
+		</div>
+		
+		<div class="col-md-12 col-sm-12" id="addblock">
+			<div class="form-group col-md-3 col-sm-3">
+				<input type='button' class="btn btn-primary" value="Add" id="add"/>
+			</div>
+		</div>
+		<div class="col-md-12 col-sm-12" >
+			<div class="form-group col-md-3 col-sm-3 pull-right">
+				<input type='text' class="form-control input-sm" id="amount" placeholder="Total Amount"/>
+			</div>
+		</div>
+		<div class="col-md-12 col-sm-12">
+			<div class="form-group col-md-3 col-sm-3 pull-right" >
+					<input type="submit" class="btn btn-primary" value="Submit"/>
+			</div>
+		</div>
+		</form>
+	</div>
 
-							<ul class="icons">
-								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
-							</ul>
-							<p class="copyright">&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com/">Unsplash</a>. Videos: <a href="http://coverr.co/">Coverr</a>.</p>
-						</div>
-					</footer>
+</div>
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<h2>Etiam veroeros lorem</h2>
+				<p>Pellentesque eleifend malesuada efficitur. Curabitur volutpat dui mi, ac imperdiet dolor tincidunt nec. Ut erat lectus, dictum sit amet lectus a, aliquet rutrum mauris. Etiam nec lectus hendrerit, consectetur risus viverra, iaculis orci. Phasellus eu nibh ut mi luctus auctor. Donec sit amet dolor in diam feugiat venenatis. </p>
 
-			<!-- Scripts -->
-				<script src="assets/js/jquery.min.js"></script>
-				<script src="assets/js/jquery.scrolly.min.js"></script>
-				<script src="assets/js/jquery.poptrox.min.js"></script>
-				<script src="assets/js/skel.min.js"></script>
-				<script src="assets/js/util.js"></script>
-				<script src="assets/js/main.js"></script>
+				<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<p class="copyright">&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com/">Unsplash</a>. Videos: <a href="http://coverr.co/">Coverr</a>.</p>
+			</div>
+		</footer>
 
-		</body>
-	</html>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/bootstrap.min.js"></script>
+
+	</body>
+</html>
