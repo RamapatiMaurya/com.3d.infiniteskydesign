@@ -77,17 +77,28 @@ router.get('/login/', function(req, res, next) {
 router.post('/upload', upload.array('img', 2), function(req, res, next) {
   var fileDetails = new FileInfoModel ({
     // String
-    p_title: req.body.p_title,
-    p_path1: "req.body.p_path1",
-    p_path2: "req.body.p_path2",
-    p_description: req.body.description,
+    title: req.body.title, //ok
+    description: req.body.description, //ok
+    width: req.body.width, //ok
+    height: req.body.height, //ok
     uploaded_by: "Rajendra Yadav",
-    file_name1: "req.body.file_name1",
-    file_name2: "req.body.file_name2",
-    measurement_unit: "inches",
-    facing: "req.body.facing",
-    currency: "req.body.currency",
+    uploaded_date: Date.now(),
+    units: req.body.units,
+    rooms: req.body.rooms,
+    floors: req.body.floors,
+    showingmode: req.body.showingmode,
+    facing: req.body.facing,
+    vastu: req.body.vastu,
+    porch: req.body.porch,
+    lawn: req.body.lawn,
+    serventroom: req.body.serventroom,
+    poojaroom: req.body.poojaroom,
+    storeroom: req.body.storeroom,
     
+    mapdigitalpath: req.files[0]? req.files[0].path : '',
+    maphandmadepath: req.files[1]? req.files[1].path : '',
+    budgetamount: req.body.budgetamount,
+    currency: "Rupee"
 
 
   })
@@ -99,8 +110,9 @@ router.post('/upload', upload.array('img', 2), function(req, res, next) {
         success:"Data Uploaded Successfully on server!!!!!", 
         subtitle1: 'Decorating & Beautiful Homes delights', subtitle2: 'Dreams fulfilled our quality experts' });
   })
-  
-  console.log(fileDetails)
+  //if(req.files[0])
+  //  console.log(path + req.files[0].path);
+ // console.log(fileDetails)
 });
 
 module.exports = router;

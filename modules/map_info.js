@@ -2,16 +2,27 @@ const { Double } = require('mongodb');
 var mongoose = require('./connection');
 
 const fileSchema = new mongoose.Schema({
-    p_title: String,
-    p_path1: String,
-    p_path2: String,
-    p_description: String,
-    uploaded_by: String,
-    file_name1: String,
-    file_name2: String,
-    measurement_unit: String,
+    title: String,
+    description: String,
+    width: String,
+    height: String,
+    units:String,
+    rooms:String,
+    floors: String,
+    showingmode: String,
     facing: String,
-    currency: String
+    vastu: String,
+    porch: String,
+    lawn: String,
+    serventroom: String,
+    poojaroom: String,
+    storeroom: String,
+    budgetamount: String,
+    currency: String,
+    uploaded_by: String,
+    uploaded_date: Date,
+    mapdigitalpath: String,
+    maphandmadepath: String
     
 
 })

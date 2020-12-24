@@ -33,34 +33,34 @@
 	<div class="main">
 		<div class="row">
 			<br /><br /><br /><br /><br /><br />
-			<form>
+			<form class="map-form" id="" name="mapform" action="/upload" method="POST" enctype="multipart/form-data">
 				<div class="col-md-12 col-sm-12">
 					<div class="form-group col-md-6 col-sm-6">
-						<label for="name">Title*</label>
-						<input type="text" class="form-control input-sm" id="name" placeholder="">
+						<label for="title">Title*</label>
+						<input type="text" class="form-control input-sm" name="title" value="Decorated Homes" placeholder="">
 					</div>
 					<div class="form-group col-md-6 col-sm-6">
-						<label for="address">Description*</label>
-						<textarea class="form-control input-sm" id="address" rows="3"></textarea>
+						<label for="description">Description*</label>
+						<textarea class="form-control input-sm" name="description" value="Decorated Homes" rows="3"></textarea>
 					</div>
 				</div>
 				<div class="col-md-12 col-sm-12" id="deceased">
 					<div class="form-group col-md-4 col-sm-4">
-						<label for="email">Width*</label>
-						<input type="email" class="form-control input-sm" id="email" placeholder="">
+						<label for="width">Width*</label>
+						<input type="text" class="form-control input-sm" name="width" value="Decorated Homes" placeholder="">
 					</div>
 					<div class="form-group col-md-1 col-sm-1">
 						<p class=" input-sm"></p>
 						<p class="row">X</p>
 					</div>
 					<div class="form-group col-md-4 col-sm-4">
-						<label for="city">Height*</label>
-						<input type="text" class="form-control input-sm" id="city" placeholder="">
+						<label for="height">Height*</label>
+						<input type="text" class="form-control input-sm" name="height" value="Decorated Homes" placeholder="">
 					</div>
 
 					<div class="form-group col-md-3 col-sm-3">
 						<label for="units">Select Units*</label>
-						<select class="form-control" id="units">
+						<select class="form-control" name="units">
 							<option>inch</option>
 							<option>feet</option>
 							<option>cm</option>
@@ -70,16 +70,16 @@
 				</div>
 				<div class="col-md-12 col-sm-12" id="deceased">
 					<div class="form-group col-md-4 col-sm-4">
-						<label for="city">No. of Rooms*</label>
-						<input type="text" class="form-control input-sm" id="city" placeholder="">
+						<label for="rooms">No. of Rooms*</label>
+						<input type="text" class="form-control input-sm" name="rooms"  value="Decorated Homes" placeholder="">
 					</div>
 					<div class="form-group col-md-4 col-sm-4">
-						<label for="city">No. of Floors*</label>
-						<input type="text" class="form-control input-sm" id="city" placeholder="">
+						<label for="floors">No. of Floors*</label>
+						<input type="text" class="form-control input-sm" name="floors" value="Decorated Homes" placeholder="">
 					</div>
 					<div class="form-group col-md-4 col-sm-4">
-						<label for="units">Showing mode*</label>
-						<select class="form-control" id="units">
+						<label for="showingmode">Showing mode*</label>
+						<select class="form-control" name="showingmode">
 							<option>Public</option>
 							<option>Protected</option>
 							<option>Private</option>
@@ -88,8 +88,8 @@
 				</div>
 				<div class="col-md-12 col-sm-12" id="deceased">
 					<div class="form-group col-md-4 col-sm-4">
-						<label for="units">Facing*</label>
-						<select class="form-control" id="units">
+						<label for="facing">Facing*</label>
+						<select class="form-control" name="facing">
 							<option>North</option>
 							<option>South</option>
 							<option>East</option>
@@ -97,15 +97,15 @@
 						</select>
 					</div>
 					<div class="form-group col-md-4 col-sm-4">
-						<label for="units">Vastu*</label>
-						<select class="form-control" id="units">
+						<label for="vastu">Vastu*</label>
+						<select class="form-control" name="vastu">
 							<option>Yes</option>
 							<option>No</option>
 						</select>
 					</div>
 					<div class="form-group col-md-4 col-sm-4">
-						<label for="units">Porch*</label>
-						<select class="form-control" id="units">
+						<label for="porch">Porch*</label>
+						<select class="form-control" name="porch">
 							<option>Yes</option>
 							<option>No</option>
 						</select>
@@ -113,30 +113,30 @@
 				</div>
 				<div class="col-md-12 col-sm-12" id="deceased">
 					<div class="form-group col-md-3 col-sm-3">
-						<label for="units">Lawn*</label>
-						<select class="form-control" id="units">
+						<label for="lawn">Lawn*</label>
+						<select class="form-control" name="lawn">
 							<option>Yes</option>
 							<option>No</option>
 						</select>
 					</div>
 
 					<div class="form-group col-md-3 col-sm-3">
-						<label for="units">Servent Room*</label>
-						<select class="form-control" id="units">
+						<label for="serventroom">Servent Room*</label>
+						<select class="form-control" name="serventroom">
 							<option>Yes</option>
 							<option>No</option>
 						</select>
 					</div>
 					<div class="form-group col-md-3 col-sm-3">
-						<label for="units">Pooja Room*</label>
-						<select class="form-control" id="units">
+						<label for="poojaroom">Pooja Room*</label>
+						<select class="form-control" name="poojaroom">
 							<option>Yes</option>
 							<option>No</option>
 						</select>
 					</div>
 					<div class="form-group col-md-3 col-sm-3">
-						<label for="units">Store Room*</label>
-						<select class="form-control" id="units">
+						<label for="storeroom">Store Room*</label>
+						<select class="form-control" name="storeroom">
 							<option>Yes</option>
 							<option>No</option>
 						</select>
@@ -144,24 +144,24 @@
 				</div>
 				<div class="col-md-12 col-sm-12" id="deceased">
 					<div class="form-group col-md-4 col-sm-4">
-						<label for="file1">Map Digital*</label>
-						<input type='file' id="file1" />
+						<label for="mapdigital">Map Digital*</label>
+						<input type='file' name="img"/>
 					</div>
 
 					<div class="form-group col-md-4 col-sm-4">
-						<label for="file2">Map Handmade*</label>
-						<input type='file' id="file2" />
+						<label for="maphandmade">Map Handmade*</label>
+						<input type='file' name="img"  />
 					</div>
 
 					<div class="form-group col-md-4 col-sm-4">
-						<label for="photo">Estimated Budget*</label>
-						<input type='text' class="form-control input-sm" id="amount" placeholder="Total Amount" />
+						<label for="budgetamount">Estimated Budget*(In Indian &#x20B9;)</label>
+						<input type='text' class="form-control input-sm" name="budgetamount" value="Decorated Homes" placeholder="Estimated budget" />
 					</div>
 				</div>
 
 				<div class="col-md-12 col-sm-12">
 					<div class="form-group col-md-3 col-sm-3 pull-right">
-						<input type="submit" class="btn btn-primary" value="Submit" />
+						<input type="submit" class="btn btn-primary" name='submit' value="Submit" />
 					</div>
 				</div>
 			</form>
