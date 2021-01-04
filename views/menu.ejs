@@ -1,0 +1,27 @@
+	<header id="header">
+		<div class="inner">
+			<a href="/" class="logo">Homesdoor</a>
+			<nav id="nav">
+				<a href="/">Home</a>
+				<a href="/category">Category</a>
+				<a href="/services">Services</a>
+				<a href="/maps">house Maps</a>
+				<a href="/career">Career</a>
+				<a href="/blog">Blogs</a>
+				<a href="/contact">Contact</a>
+				<a href="/upload">Upload</a>
+				<% if (user && user._id && user._id.length<=0) {%>
+				<a href="/profile">Profile</a>
+				<% }else{ %>
+				<a href="/login">Login</a>
+				<% } %>
+			</nav>
+			<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+		</div>
+	</header>
+	<!-- Banner -->
+	<!--
+				To use a video as your background, set data-video to the name of your video without
+				its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
+				formats to work correctly.
+			-->

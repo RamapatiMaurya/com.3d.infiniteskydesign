@@ -24,7 +24,6 @@ const fileSchema = new mongoose.Schema({
     mapdigitalpath: String,
     maphandmadepath: String
     
-
 })
 
 const FileInfoModel = mongoose.model('mapinfo', fileSchema)

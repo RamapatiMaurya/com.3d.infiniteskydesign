@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		<%= title %>
+	</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/menu_main.css" />
+
+</head>
+
+<body id="top">
+	<% include menu %>
+
+		<div class="main">
+			<div class="row">
+				<br /><br /><br /><br /><br /><br />
+				<form class="map-form" style="margin: 0 auto;" id="" name="mapform" action="/upload" method="POST"
+					enctype="multipart/form-data">
+
+					<div class="form-group col-md-8 col-sm-8">
+						<label for="phone">Phone Number*</label>
+						<input type="text" class="form-control input-sm" name="phone" placeholder="">
+					</div>
+
+					<div class="form-group col-md-8 col-sm-8">
+						<label for="phone">OR</label>
+					</div>
+
+					<div class="form-group col-md-8 col-sm-8">
+						<label for="email">Email ID*</label>
+						<input type="text" class="form-control input-sm" name="email" placeholder="">
+					</div>
+					<div class="form-group col-md-8 col-sm-8">
+						<label for="password">Password*</label>
+						<input type="text" class="form-control input-sm" name="password" placeholder="">
+					</div>
+					
+
+					<div class="col-md-12 col-sm-12" id="deceased">
+
+						<div class="form-group col-md-3 col-sm-3">
+							<input type="submit"  class="btn btn-primary" style="margin-top: 15px;" name='submit' value="Submit" />
+						
+						<label for="">Not register yet? <a href="/register">click here</a></label>
+						</div>
+					</div>
+
+				</form>
+			</div>
+
+		</div>
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<h2>Etiam veroeros lorem</h2>
+				<p>Pellentesque eleifend malesuada efficitur. Curabitur volutpat dui mi, ac imperdiet dolor tincidunt
+					nec.
+					Ut erat lectus, dictum sit amet lectus a, aliquet rutrum mauris. Etiam nec lectus hendrerit,
+					consectetur
+					risus viverra, iaculis orci. Phasellus eu nibh ut mi luctus auctor. Donec sit amet dolor in diam
+					feugiat
+					venenatis. </p>
+
+				<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<p class="copyright">&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a
+						href="https://unsplash.com/">Unsplash</a>. Videos: <a href="http://coverr.co/">Coverr</a>.</p>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

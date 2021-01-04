@@ -19,15 +19,25 @@ var router = express.Router();
 //var mongoose = require('../modules/connection')
 const mongoose = require('mongoose');
 var FileInfoModel = require('../modules/map_info')
+var user = require('../modules/users')
 router.use(express.static(__dirname + "./public"))
 var mapDetails = FileInfoModel.find({});
+var userDetails = user.find({phone:'9953397678'});
+
+
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  mongoose.connect('mongodb+srv://RamapatiMaurya:Ramapati123@cluster0.cf6xo.mongodb.net/media_info?retryWrites=true&w=majority',
+  mongoose.connect('mongodb+srv://RamapatiMaurya:Ramapati123@cluster0.cf6xo.mongodb.net/sky_design?retryWrites=true&w=majority',
     { useNewUrlParser: true }, () => { console.log('Remote DB connected!') });
+  
+  var user = userDetails.exec(function (err, data) {
+    if (err) throw err
+    else return data;
+  })
+
   mapDetails.exec(function (err, data) {
     if (err) throw err
-    res.render('index', { success: 'jai', data: data });
+    res.render('index', { success: 'jai', data: data, user:user });
     // console.log(data)
     console.log("Loaded successfully!")
     mongoose.connection.close()
@@ -69,12 +79,17 @@ router.get('/maps/', function (req, res, next) {
 
 /* GET register page. */
 router.get('/register/', function (req, res, next) {
-  res.render('register', { title: 'Register', flag: 0, success: '' });
+  res.render('register', { title: 'Register', flag: 0, success: '', user:user });
+});
+
+/* GET profile page. */
+router.get('/profile/', function (req, res, next) {
+  res.render('profile', { title: 'Profile', flag: 0, success: '', user:user });
 });
 
 /* GET login page. */
 router.get('/login/', function (req, res, next) {
-  res.render('login', { title: 'Login', flag: 0, success: '' });
+  res.render('login', { title: 'Login', success: '', user:user });
 });
 
 /* GET Upload page. */
@@ -84,7 +99,7 @@ router.get('/upload/', function (req, res, next) {
 
 /* POST Upload page. */
 router.post('/upload', upload.array('img', 2), function (req, res, next) {
-  mongoose.connect('mongodb+srv://RamapatiMaurya:Ramapati123@cluster0.cf6xo.mongodb.net/media_info?retryWrites=true&w=majority',
+  mongoose.connect('mongodb+srv://RamapatiMaurya:Ramapati123@cluster0.cf6xo.mongodb.net/sky_design?retryWrites=true&w=majority',
     { useNewUrlParser: true }, () => { console.log('Remote DB connected!') });
   var fileDetails = new FileInfoModel({
     // String
